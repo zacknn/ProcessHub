@@ -1,9 +1,11 @@
+import Button from "@/components/Button";
 import Image from "next/image";
 
 // app/page.tsx
 export default function Home() {
+  const content = "This is a button content";
   return (
-    <div className="min-h-screen p-12 max-w-2xl mx-auto">
+    <div className="min-h-screen p-12 max-w-2xl mx-auto ">
       {/* Using the font utility class */}
       <h1 className="font-indie text-5xl mb-4">Indie Flower</h1>
       <p className="font-indie text-xl text-gray-600 mb-8">
@@ -30,6 +32,8 @@ export default function Home() {
           — Happy user
         </p>
       </div>
+
+      <Button buttonName="Click me" content={content} />
     </div>
   )
 }
