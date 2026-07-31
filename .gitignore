@@ -20,6 +20,17 @@
 # production
 /build
 
+# local/editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.temp
+.turbo/
+.cache/
+.pnpm-store/
+
 # misc
 .DS_Store
 *.pem
@@ -39,3 +50,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/app/generated/prisma
+
+.agents
+.claude
+.windsurf

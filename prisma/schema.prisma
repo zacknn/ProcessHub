@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+// this is the basic database schema work with just sqlite
+model Job {
+  id            String      @id @default(cuid())
+  originalFileName String
+  processedFileName String 
+  operation String
+  status String
+  createdAt DateTime
+  updatedAt DateTime
+}
