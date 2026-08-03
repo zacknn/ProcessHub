@@ -1,9 +1,6 @@
 import Button from "@/components/Button";
-import Image from "next/image";
+import { redirect } from "next/navigation";
 
-// app/page.tsx
 export default function Home() {
-  return (
-    
-  )
+  return redirect("/operations");
 }

@@ -14,7 +14,7 @@ const indieFlower = Indie_Flower({
 })
 
 export const metadata: Metadata = {
-  title: 'My Handwritten App',
+  title: 'ProcessHub',
   description: 'Using Indie Flower font',
 }
 export default function RootLayout({
