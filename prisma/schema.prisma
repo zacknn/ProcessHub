@@ -13,11 +13,12 @@ datasource db {
 }
 // this is the basic database schema work with just sqlite
 model Job {
-  id            String      @id @default(cuid())
-  originalFileName String
-  processedFileName String 
-  operation String
-  status String
-  createdAt DateTime
-  updatedAt DateTime
+  id                String   @id @default(cuid())
+  originalFileName  String
+  storedFileName    String
+  processedFileName String?
+  operation         String
+  status            String   @default("PENDING")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
 }
