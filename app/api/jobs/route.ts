@@ -55,7 +55,7 @@ export async function POST(req: Request) {
     const buffer = Buffer.from(bytes);
 
     const uploadDir = path.join(process.cwd(), "storage", "uploads");
-    const processedDir = path.join(process.cwd(), "storage", "processed");
+    const processedDir = path.join(process.cwd(), "public", "processed");
 
     await mkdir(uploadDir, { recursive: true });
     await mkdir(processedDir, { recursive: true });
@@ -94,6 +94,7 @@ export async function POST(req: Request) {
       return NextResponse.json({
         success: true,
         job,
+        processedImageUrl: `/processed/${processedFileName}`,
       });
     } catch (processingError) {
       console.error("Image processing error:", processingError);
